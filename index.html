@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>นโยบายความเป็นส่วนตัว — CheckBank</title>
+<style>
+  body { font-family: -apple-system, sans-serif; max-width: 680px; margin: 0 auto; padding: 24px 16px; color: #1a1a1a; line-height: 1.7; }
+  h1 { color: #12B671; font-size: 24px; }
+  h2 { color: #12B671; font-size: 18px; margin-top: 32px; }
+  p, li { font-size: 15px; color: #333; }
+  .updated { color: #888; font-size: 13px; }
+  .delete-box { background: #fff3f3; border: 1px solid #ffcccc; border-radius: 8px; padding: 16px; margin-top: 8px; }
+  a { color: #12B671; }
+</style>
+</head>
+<body>
+<h1>🔒 นโยบายความเป็นส่วนตัว</h1>
+<p class="updated">อัปเดตล่าสุด: 13 มิถุนายน 2569</p>
+<p>CheckBank พัฒนาโดย OHM2 (sparkone.dev) นโยบายนี้อธิบายวิธีที่เราเก็บรวบรวม ใช้ และปกป้องข้อมูลของคุณ</p>
+<h2>1. ข้อมูลที่เราเก็บ</h2>
+<ul>
+  <li><strong>ข้อมูลบัญชี:</strong> อีเมล รหัสผ่าน (เข้ารหัสโดย Supabase Auth)</li>
+  <li><strong>ข้อมูลการเงิน:</strong> รายรับ-รายจ่าย บัญชีธนาคาร เป้าหมายการออม ที่คุณบันทึกเอง</li>
+  <li><strong>รูปภาพสลิป:</strong> ส่งไปประมวลผลที่ Groq API และไม่ถูกเก็บไว้หลังประมวลผล</li>
+  <li><strong>ข้อมูลโปรไฟล์:</strong> ชื่อที่แสดง และตัวการ์ตูนที่เลือก</li>
+</ul>
+<h2>2. วิธีที่เราใช้ข้อมูล</h2>
+<ul>
+  <li>แสดงยอดเงิน สถิติ และสรุปการเงินของคุณ</li>
+  <li>ประมวลผลสลิปด้วย AI เพื่ออ่านข้อมูลอัตโนมัติ</li>
+  <li>บันทึกเป้าหมายการออมและติดตามความคืบหน้า</li>
+</ul>
+<h2>3. การแชร์ข้อมูลกับบุคคลที่สาม</h2>
+<ul>
+  <li><strong>Supabase:</strong> ฐานข้อมูลและระบบ Auth</li>
+  <li><strong>Groq API:</strong> ประมวลผลรูปภาพสลิปด้วย AI ผ่าน Edge Function ของเรา ไม่ถูกเก็บถาวร</li>
+  <li><strong>Google OAuth:</strong> สำหรับผู้ที่เลือกเข้าสู่ระบบด้วย Google</li>
+</ul>
+<p>เราไม่ขายข้อมูลของคุณให้บุคคลใดทั้งสิ้น</p>
+<h2>4. ความปลอดภัย</h2>
+<p>ข้อมูลทั้งหมดถูกเข้ารหัสระหว่างส่ง (TLS) และเข้าถึงได้เฉพาะบัญชีของคุณผ่าน Row Level Security ของ Supabase</p>
+<h2>5. สิทธิ์ของคุณ</h2>
+<ul>
+  <li>ดู แก้ไข หรือลบข้อมูลของคุณได้ตลอดเวลาในแอป</li>
+  <li>ลบบัญชีและข้อมูลทั้งหมดได้ที่: ตั้งค่า → ลบบัญชี</li>
+</ul>
+<h2>6. การลบบัญชีและข้อมูล</h2>
+<div class="delete-box">
+  <strong>วิธีลบบัญชี:</strong><br>
+  เปิดแอป → ตั้งค่า → เลื่อนลงล่าง → กด "ลบบัญชี" → ยืนยัน 2 ครั้ง<br><br>
+  การลบบัญชีจะลบข้อมูลทั้งหมดอย่างถาวร ได้แก่ ธุรกรรม บัญชี เป้าหมาย และสลิปทั้งหมด
+</div>
+<h2>7. นโยบายเกี่ยวกับเด็ก</h2>
+<p>แอปนี้ไม่ได้ออกแบบสำหรับผู้ที่มีอายุต่ำกว่า 13 ปี</p>
+<h2>8. ติดต่อเรา</h2>
+<p>ติดต่อได้ที่: <a href="mailto:sparkone.dev@gmail.com">sparkone.dev@gmail.com</a></p>
+<hr style="margin-top:48px; border:none; border-top:1px solid #eee;">
+<p style="color:#aaa; font-size:12px; text-align:center;">© 2569 CheckBank by OHM2 · sparkone.dev</p>
+</body>
+</html>
