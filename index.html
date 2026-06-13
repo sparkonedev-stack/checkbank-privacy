@@ -6,166 +6,50 @@
 <title>นโยบายความเป็นส่วนตัว — CheckBank</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    font-family: 'Sarabun', -apple-system, BlinkMacSystemFont, sans-serif;
-    background: #f7f8fa;
-    color: #1a1a2e;
-    line-height: 1.8;
-  }
-  header {
-    background: #0a2e1f;
-    padding: 40px 24px;
-    text-align: center;
-  }
-  header .logo {
-    font-size: 28px;
-    font-weight: 800;
-    color: #ffffff;
-    letter-spacing: 1px;
-  }
+  body { font-family: 'Sarabun', -apple-system, BlinkMacSystemFont, sans-serif; background: #f7f8fa; color: #1a1a2e; line-height: 1.8; }
+  header { background: #0a2e1f; padding: 40px 24px; text-align: center; }
+  header .logo { font-size: 28px; font-weight: 800; color: #ffffff; letter-spacing: 1px; }
   header .logo span { color: #12B671; }
-  header .subtitle {
-    font-size: 13px;
-    color: #7a9e8a;
-    margin-top: 6px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-  }
-  .container {
-    max-width: 760px;
-    margin: 40px auto;
-    padding: 0 20px 60px;
-  }
-  .meta {
-    background: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 12px;
-    padding: 20px 24px;
-    margin-bottom: 32px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
+  header .subtitle { font-size: 13px; color: #7a9e8a; margin-top: 6px; letter-spacing: 2px; text-transform: uppercase; }
+  .container { max-width: 760px; margin: 40px auto; padding: 0 20px 60px; }
+  .meta { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px 24px; margin-bottom: 32px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
   .meta-item { font-size: 13px; color: #64748b; }
   .meta-item strong { color: #1a1a2e; }
-  .badge {
-    background: #12B67115;
-    color: #12B671;
-    font-size: 12px;
-    font-weight: 700;
-    padding: 4px 12px;
-    border-radius: 20px;
-    border: 1px solid #12B67130;
-  }
-  .section {
-    background: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 12px;
-    padding: 28px 28px;
-    margin-bottom: 16px;
-  }
-  .section-number {
-    font-size: 11px;
-    font-weight: 700;
-    color: #12B671;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-bottom: 6px;
-  }
-  h2 {
-    font-size: 17px;
-    font-weight: 700;
-    color: #0a2e1f;
-    margin-bottom: 14px;
-    padding-bottom: 12px;
-    border-bottom: 1px solid #f1f5f9;
-  }
+  .badge { background: #12B67115; color: #12B671; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px; border: 1px solid #12B67130; }
+  .section { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 28px; margin-bottom: 16px; }
+  .section-number { font-size: 11px; font-weight: 700; color: #12B671; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 6px; }
+  h2 { font-size: 17px; font-weight: 700; color: #0a2e1f; margin-bottom: 14px; padding-bottom: 12px; border-bottom: 1px solid #f1f5f9; }
   p { font-size: 14px; color: #475569; margin-bottom: 10px; }
-  ul { padding-left: 20px; }
+  ul, ol { padding-left: 20px; }
   li { font-size: 14px; color: #475569; margin-bottom: 8px; }
   li strong { color: #1a1a2e; }
-  .highlight-box {
-    background: #f8fafc;
-    border-left: 3px solid #12B671;
-    border-radius: 0 8px 8px 0;
-    padding: 16px 20px;
-    margin-top: 12px;
-  }
-  .highlight-box p { margin: 0; font-size: 13px; line-height: 1.7; }
-  .delete-steps {
-    margin-top: 12px;
-    counter-reset: steps;
-  }
-  .delete-steps li {
-    list-style: none;
-    counter-increment: steps;
-    padding-left: 28px;
-    position: relative;
-    margin-bottom: 6px;
-  }
-  .delete-steps li::before {
-    content: counter(steps);
-    position: absolute;
-    left: 0;
-    top: 2px;
-    width: 20px;
-    height: 20px;
-    background: #12B671;
-    color: white;
-    font-size: 11px;
-    font-weight: 700;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .contact-box {
-    background: #0a2e1f08;
-    border: 1px solid #12B67120;
-    border-radius: 10px;
-    padding: 20px;
-    margin-top: 12px;
-  }
-  .contact-box a {
-    color: #12B671;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 14px;
-  }
+  .highlight-box { background: #f8fafc; border-left: 3px solid #12B671; border-radius: 0 8px 8px 0; padding: 16px 20px; margin-top: 12px; }
+  .highlight-box p { margin: 0; font-size: 13px; }
+  .delete-steps { margin-top: 12px; counter-reset: steps; padding-left: 0; }
+  .delete-steps li { list-style: none; counter-increment: steps; padding-left: 32px; position: relative; margin-bottom: 8px; }
+  .delete-steps li::before { content: counter(steps); position: absolute; left: 0; top: 1px; width: 20px; height: 20px; background: #12B671; color: white; font-size: 11px; font-weight: 700; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+  .contact-box { background: #0a2e1f08; border: 1px solid #12B67120; border-radius: 10px; padding: 20px; margin-top: 12px; }
+  .contact-box a { color: #12B671; text-decoration: none; font-weight: 600; }
   .contact-box p { margin: 4px 0; font-size: 13px; }
-  footer {
-    text-align: center;
-    padding: 32px 20px;
-    font-size: 12px;
-    color: #94a3b8;
-    border-top: 1px solid #e2e8f0;
-    margin-top: 20px;
-  }
+  footer { text-align: center; padding: 32px 20px; font-size: 12px; color: #94a3b8; border-top: 1px solid #e2e8f0; margin-top: 20px; }
 </style>
 </head>
 <body>
-
 <header>
   <div class="logo">Check<span>Bank</span></div>
   <div class="subtitle">Privacy Policy</div>
 </header>
-
 <div class="container">
-
   <div class="meta">
-    <div class="meta-item"><strong>ผู้พัฒนา:</strong> OHM2 (sparkone.dev)</div>
+    <div class="meta-item"><strong>ผู้พัฒนา:</strong> Kittipong Chanpeng</div>
     <div class="meta-item"><strong>อัปเดตล่าสุด:</strong> 13 มิถุนายน 2569</div>
     <div class="badge">v1.0</div>
   </div>
-
   <div class="section">
     <div class="section-number">บทนำ</div>
     <h2>เกี่ยวกับนโยบายนี้</h2>
     <p>นโยบายความเป็นส่วนตัวฉบับนี้อธิบายวิธีที่แอปพลิเคชัน CheckBank เก็บรวบรวม ใช้ และปกป้องข้อมูลของผู้ใช้งาน การใช้งานแอปพลิเคชันถือว่าผู้ใช้ยอมรับนโยบายนี้</p>
   </div>
-
   <div class="section">
     <div class="section-number">หมวด 1</div>
     <h2>ข้อมูลที่เราเก็บรวบรวม</h2>
@@ -176,7 +60,6 @@
       <li><strong>ข้อมูลโปรไฟล์:</strong> ชื่อที่แสดงและตัวละครมาสคอตที่ผู้ใช้เลือก</li>
     </ul>
   </div>
-
   <div class="section">
     <div class="section-number">หมวด 2</div>
     <h2>วัตถุประสงค์การใช้ข้อมูล</h2>
@@ -187,7 +70,6 @@
       <li>ให้คำแนะนำทางการเงินผ่านระบบ AI</li>
     </ul>
   </div>
-
   <div class="section">
     <div class="section-number">หมวด 3</div>
     <h2>การแชร์ข้อมูลกับบุคคลที่สาม</h2>
@@ -200,23 +82,20 @@
       <p>CheckBank ไม่มีนโยบายขาย แลกเปลี่ยน หรือเปิดเผยข้อมูลส่วนบุคคลของผู้ใช้ให้แก่บุคคลภายนอกเพื่อวัตถุประสงค์ทางการค้า</p>
     </div>
   </div>
-
   <div class="section">
     <div class="section-number">หมวด 4</div>
     <h2>มาตรการความปลอดภัย</h2>
     <p>ข้อมูลทั้งหมดถูกเข้ารหัสระหว่างการส่งผ่านโปรโตคอล TLS และการเข้าถึงข้อมูลถูกจำกัดเฉพาะบัญชีของผู้ใช้แต่ละรายผ่านระบบ Row Level Security (RLS) ของ Supabase</p>
   </div>
-
   <div class="section">
     <div class="section-number">หมวด 5</div>
     <h2>สิทธิ์ของผู้ใช้งาน</h2>
     <ul>
       <li>ผู้ใช้มีสิทธิ์ดู แก้ไข และลบข้อมูลของตนเองได้ตลอดเวลาผ่านแอปพลิเคชัน</li>
-      <li>ผู้ใช้สามารถลบบัญชีและข้อมูลทั้งหมดได้ผ่านเมนู ตั้งค่า</li>
+      <li>ผู้ใช้สามารถลบบัญชีและข้อมูลทั้งหมดได้ผ่านเมนูตั้งค่า</li>
       <li>หากต้องการขอข้อมูลหรือใช้สิทธิ์อื่น สามารถติดต่อได้ที่อีเมลด้านล่าง</li>
     </ul>
   </div>
-
   <div class="section">
     <div class="section-number">หมวด 6</div>
     <h2>การลบบัญชีและข้อมูล</h2>
@@ -231,34 +110,28 @@
       <p>การลบบัญชีจะลบข้อมูลทั้งหมดอย่างถาวร ได้แก่ ธุรกรรม บัญชี เป้าหมายการออม และสลิปทั้งหมด และไม่สามารถกู้คืนได้</p>
     </div>
   </div>
-
   <div class="section">
     <div class="section-number">หมวด 7</div>
     <h2>นโยบายสำหรับผู้เยาว์</h2>
     <p>แอปพลิเคชันนี้ไม่ได้ออกแบบสำหรับผู้ที่มีอายุต่ำกว่า 13 ปี และเราไม่มีเจตนาเก็บรวบรวมข้อมูลของผู้เยาว์</p>
   </div>
-
   <div class="section">
     <div class="section-number">หมวด 8</div>
     <h2>การเปลี่ยนแปลงนโยบาย</h2>
     <p>หากมีการเปลี่ยนแปลงนโยบายที่มีนัยสำคัญ เราจะแจ้งให้ผู้ใช้ทราบผ่านแอปพลิเคชันและอัปเดตวันที่ด้านบน การใช้งานแอปต่อเนื่องหลังจากการเปลี่ยนแปลงถือว่าผู้ใช้ยอมรับนโยบายที่อัปเดต</p>
   </div>
-
   <div class="section">
     <div class="section-number">หมวด 9</div>
     <h2>ติดต่อผู้พัฒนา</h2>
     <p>หากมีคำถามหรือข้อสงสัยเกี่ยวกับนโยบายความเป็นส่วนตัว กรุณาติดต่อ</p>
     <div class="contact-box">
-      <p><strong>OHM2 Development</strong></p>
+      <p><strong>Kittipong Chanpeng</strong></p>
       <p>อีเมล: <a href="mailto:sparkone.dev@gmail.com">sparkone.dev@gmail.com</a></p>
     </div>
   </div>
-
 </div>
-
 <footer>
-  &copy; 2569 CheckBank — พัฒนาโดย OHM2 (sparkone.dev) &nbsp;|&nbsp; สงวนลิขสิทธิ์
+  &copy; 2569 CheckBank — พัฒนาโดย Kittipong Chanpeng &nbsp;|&nbsp; สงวนลิขสิทธิ์
 </footer>
-
 </body>
 </html>
